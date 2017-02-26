@@ -1,0 +1,25 @@
+<h2>This is the inputs state</h2>
+<div class="jsonbox bldk">
+
+<h3 class="shadn dkbg y">STATE PARAMS.ID is (via { {paramTest} } ) ->> {{paramTest}}</h3>
+<h2 class="chtitle shadn n rdbg">{{inputsTest}}</h2>
+
+</div>
+<div class="testbox  shadw"><pre class="dkbg sand">Add a parameter by INVOKING INPUTS!<br>
+in home.html...<br>
+  <span class="gr">< a ui-sref="inputs()">INPUTS< / a></span>
+
+Then, we put in an object.<br>
+<span class="gr">< a ui-sref="inputs(<span class="coral">{}</span>)">INPUTS< / a></span>
+
+And this <span class="coral">Object</span> will be the $stateParams
+
+NB: We can only give it params that we have specified in the url path.
+It can only accept $stateParams that we've set in our app.js file.
+
+Thus:
+<span class="gr">< a ui-sref="inputs(<span class="coral">{id: 'default input param'}</span>)">INPUTS< / a></span>
+
+This is ui-router's way of passing different states in your code.
+
+</pre></div>

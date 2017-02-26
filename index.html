@@ -1,0 +1,39 @@
+<html ng-app="myApp">
+<link rel="stylesheet" href="masterStyles.css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+
+	<body><pre>
+		<div class="talkbox3">Nav Menu
+			<nav class="squatbox2">
+			<button ui-sref="home">home</button>
+			<button ui-sref="cascade">cascade</button>
+			<button ui-sref="devTools">devTools</button>
+			<button ui-sref="jayq">jayq</button>
+			<button ui-sref="perfView">perfView</button>
+			</nav>
+			<nav class="squatbox3">
+				<input type="text" placeholder="parms for INPUT STATE" name="" value="" ng-model="inputParam"><button ui-sref="inputs({id: inputParam})">inputs</button>
+				</nav>
+		</div>
+<div class="talkbox2">
+	<ui-view></ui-view>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+<script src="service.js"></script>
+<script src="./views/home/homeCtrl.js"></script>
+<script src="./views/jayq/jayqCtrl.js"></script>
+<script src="./views/cascade/cascadeCtrl.js"></script>
+<script src="./views/devTools/devToolsCtrl.js"></script>
+<script src="./views/perfView/perfViewCtrl.js"></script>
+<script src="./views/inputs/inputsCtrl.js"></script>
+</pre>
+</body>
+</html>
