@@ -74,9 +74,6 @@ angular.module("myApp")
           };
           fish();
 
-          function fuck() {
-            console.log("fuck")
-          }
 
         })
 
