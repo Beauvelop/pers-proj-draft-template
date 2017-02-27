@@ -1,22 +1,24 @@
 angular.module('myApp')
-  .service("myService", ["$http", function($http, myService) {
-    this.getPerson = function() {
-      // return me;
+  .service('weatherService', ['$http', function($http) {
+    this.getWeather = function() {
+      var apiKey = "ee148a39251d4314c86b16c7b0c3034d";
+      return $http({
+        method: 'GET',
+        url: "http://api.openweathermap.org/data/2.5/weather?lat=40.2181&lon=-111.6133&units=imperial&appid=" +
+          apiKey
+      });
 
-      // $http({
-      //   method: GET,
-      //   url: "http//somesite.com/api/content=";
-    }
+      promise.then(function(response) {
+        if (response.status === 200) {
+          return response.data.data;
+          // NOTE: 'data.data' is common:
+          //1st is angular's...2nd is the server's
+        }
+        return "error!";
+      })
+      return promise;
+    };
 
-    // promise.then(function(response) {
-    //   if (response.status === 200) {
-    //     return response.data.data;
-    //     // NOTE: 'data.data' is common:
-    //     //1st is angular's...2nd is the server's
-    //   }
-    //   return "error!";
-    // })
-    // return promise;
 
 
   }]);

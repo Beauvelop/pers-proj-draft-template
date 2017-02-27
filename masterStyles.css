@@ -9,19 +9,22 @@ font-family: 'Raleway', sans-serif;
     box-sizing: border-box;
 }
 body {
-    font-family: fantasy;
     color: #a55;
-    background-color: #79b0aa;
+    background-color: darkslategrey;
     font-size: 2vw;
     font-weight: lighter;
     font-family: 'Raleway', sans-serif;
     letter-spacing: 0.2vw;
-
+    padding: 0;
 }
 button {
+  background-color: peru;
+  color: grey;
   width: 8vw;
   height: 4vh;
-  margin: 2vh 3vw;
+  padding: 0;
+  border: 1px solid maroon;
+  margin: .5vh 2vw;
   box-shadow: 2px 2px 12px 3px rgba(56,51,51,.74);
   display: inline;
 }
@@ -167,7 +170,7 @@ img {
     color: rgb(203, 184, 136);
     background-color: rgba(104, 133, 129, 0.5);
     box-shadow: 4px 4px 5px black;
-    font-family: "PT Sans";
+    font-family: "Raleway";
     font-size: 1.8vw;
 }
 .shadn {
@@ -275,7 +278,7 @@ img {
     letter-spacing: 0.1vw;
 }
 .outbox2 {
-  font-family: "PT Sans", fantasy;
+  font-family: "Raleway", fantasy;
 
     width: 95%;
     padding: 5vw;
@@ -492,10 +495,15 @@ h1 {
 }
 
 a {
-    color: aqua;
+    color: sienna;
     text-decoration: none;
-    padding: 1%;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    width: 100%;
+}
+a:hover {
+  color: linen;
 }
 
 .formal {
@@ -552,8 +560,19 @@ li {
   font-family: 'Raleway', sans-serif;
   padding: 2%;
   margin: 0%;
-  background-color: rgba(184,165,129,1);
-  box-shadow: inset 1px 1px 20px 10px rgb(173,103,26);
+  background-color: rgba(6,0,42,.94);
+  box-shadow: inset 1vw 1vw 30vw 10vw black;
+  color: rgb(46,2,2);
+  padding: auto, 5%;
+  text-align: left;
+  border: 1px solid wheat;
+}
+.fr3 {
+  font-family: 'Raleway', sans-serif;
+  padding: 2%;
+  margin: 0%;
+  background-color: rgba(184,165,129,.3);
+  box-shadow: inset 1px 1px 20px 10px rgba(22,37,35,.59);
   color: rgb(46,2,2);
   padding: auto, 5%;
   text-align: left;
@@ -562,7 +581,7 @@ li {
 
 .fr {
     font-family: 'Raleway', sans-serif;
-    padding: 2%;
+    padding: .5%;
     margin: 0%;
     background-color: rgba(33, 1, 44, .4);
     color: rgb(182, 160, 110);
@@ -816,19 +835,30 @@ pre {
     height: auto;
 }
 input {
-    font-size: .8em;
-    color: wheat;
+  margin: .5vh 2vw;
+  outline-color: slategrey;
+    font-size: .7em;
+    font-weight: lighter;
+    color: linen;
+    height: 4vh;
+    border: 1px solid pink;
+    box-shadow: inset 1px 1px 1px 4px rgba(15,15,15,.29);
     text-align: center;
-    background: hsl(15, 10%, 14%);
+    background: hsl(15, 10%, 44%);
 }
 input:hover {
-    border: 5px solid yellow;
+    border: 1px solid linen;
 }
 input:focus {
-    border: 5px solid red;
+    border: 1px solid red;
+    outline-style: ridge;
 }
 input:active {
-    border: 5px solid skyblue;
+    border: 1px solid slategrey;
+}
+
+input::-webkit-input-placeholder {
+  color: peru;
 }
 .cl-both {
     clear: both;
@@ -866,4 +896,154 @@ table {
   color: wheat;
   height: auto;
   z-index: 2;
+}
+.hidden {
+  visibility: hidden;
+}
+/* =========SVG CSS============ */
+/*div {
+  position         : absolute;
+  width            : 250px;
+  height           : 150px;
+  margin           : 20% 20%;
+  border           : 2px solid brown;
+  background-color : #a2ec96;
+  box-shadow       : 2px 2px 2px 5px black;
+}*/
+svg {
+  width        : 100%;
+  height       : 60vh;
+  /*margin-right : 30%;*/
+  margin-left  : 10%;
+/*   border       : 1px solid wheat; */
+}
+
+li {
+  color : #3c2;
+}
+
+.fishGrp {
+  position : absolute;
+}
+
+#eyeBone {
+
+}
+
+#backBone {
+
+}
+
+#tailBone {
+
+}
+.bones {
+  fill: #E2E1FF;
+  stroke: #8480FF;
+
+}
+
+#frontBone:hover {
+  fill       : #f1dc6c;
+  transition : 1s all ease;
+}
+
+#noseBone:hover {
+  transform  : translate3d(30px, 0px, 0);
+  transition : .5s transform linear;
+}
+
+.myPath {
+
+}
+
+.skin {
+  fill : #FF931E;
+}
+
+#skinBody {
+  fill : #FF931E;
+
+}
+#skinTail {
+  fill : #FF931E;
+}
+
+#mouth {
+ stroke: #9E005D;
+ fill: none;
+ stroke-width:5;
+}
+
+#topFin {
+fill: #2E3192;
+}
+
+#wing {
+fill: #2E3192;
+}
+
+#eyeSocket {
+  stroke: #9e004e;
+  fill: none;
+  stroke-width: 8;
+}
+
+#pupil{
+fill: #29294e;
+stroke-width: 5px;
+stroke: #4242f7;
+}
+
+
+.fishtail {
+  animation: fishtailSlow 1.2s ease-in-out infinite alternate;
+  /*border-radius: 50%;*/
+  /*box-shadow:
+    2.5em .5em 1em -1em rgba(black, .1),
+    2.5em 0 0 0 $color-b,
+    2.75em -.15em 0 .05em $color-a,
+    2.8em .1em 0 .1em shade($color-a, 10%);*/
+  /*height: 9em;
+  left: -15.8em;*/
+  position: absolute;
+  /*top: -5.5em;*/
+  /*transform: skewX(200deg);*/
+  transform-origin: 5em center;
+  transform-style: preserve-3d;
+  /*width: 7em;*/
+}
+.fish-container {
+  /*perspective: 600px;*/
+  /*position: absolute;*/
+
+}
+.fishbuoy {
+  width: auto;
+  /*background-color: red;*/
+  animation: fishbuoy .8s ease-in-out infinite alternate;
+  perspective: 600px;
+  position: absolute;
+  /*top: 40%;
+  left: 50%;*/
+  transform: translateX(50%) translateY(40vw);
+  /*z-index: 1;*/
+}
+
+@keyframes fishbuoy {
+  from {
+    top: calc(50% - .25em);
+  }
+  to {
+    top: calc(50% + .25em);
+  }
+}
+
+@keyframes fishtailSlow {
+  from {
+    transform: rotateY(35deg) skewX(1deg);
+  }
+  to {
+    transform: rotateY(-35deg) skewX(1deg);
+  }
 }
